@@ -1,0 +1,63 @@
+<meta meta charset=utf-8>
+<link rel="stylesheet" type="text/css" href="app/medico/style.css" />
+<div class="panel-body" style="margin:0px 20px 0px 10px">
+	
+	<div class="alert alert-success" role="alert" ng-if="success">
+		<strong>{{success}}</strong>.
+	</div>
+	<div class="alert alert-danger" role="alert" ng-if="error">
+		<strong>{{error}}</strong>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+			<h3>Cadastro de Usuário</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<label>Primeiro Nome</label>
+			<input type="text" ng-model="dados.nome" class="form-control"/>
+		</div>
+		<div class="col-lg-4">
+			<label>Último Nome</label>
+			<input type="text" ng-model="dados.sobrenome" class="form-control"/>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-lg-4">
+			<label>Email</label>
+			<input type="text" ng-model="dados.email" class="form-control"/>
+		</div>
+		<div class="col-lg-1">
+			<label>Ativo</label>
+			<div class="checkbox-btn">
+				<input type="checkbox" ng-model="dados.situacao" />
+			</div>
+		</div>
+	</div>
+	<br />
+	
+	<div class="row">
+		<div class="col-lg-4">
+			<label>Senha</label>
+			<input type="password" ng-model="senha" class="form-control"/>
+		</div>
+	</div>
+	<br />
+	
+	<div class="row">
+		<div class="col-lg-4">
+			<label>Confirmar Senha</label>
+			<input type="password" ng-model="confirmSenha" class="form-control"/>
+		</div>
+	</div>
+	
+	<br />
+	
+	<div class="row">
+		<div class="col-lg-4">
+			<button ng-click="salvar()">Salvar</button>
+		</div>
+	</div>
+</div>

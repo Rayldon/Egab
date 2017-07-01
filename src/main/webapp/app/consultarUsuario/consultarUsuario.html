@@ -1,0 +1,38 @@
+<meta meta charset=utf-8>
+<link rel="stylesheet" type="text/css" href="app/medico/style.css" />
+
+<div class="panel-body" style="margin:0px 20px 0px 10px; width:100%">
+	<div class="alert alert-success" role="alert" ng-if="success">
+		<strong>{{success}}</strong>.
+	</div>
+	<div class="alert alert-danger" role="alert" ng-if="error">
+		<strong>{{error}}</strong>
+	</div>
+	
+	<table border="1" ng-if="dados" class="table-striped" style="width:100%">
+		<tr>
+			<th width="5%">#</th>
+			<th width="15%">Nome</th>
+			<th width="20%">Sobrenome</th>
+			<th width="20%">Email</th>
+			<th width="15%">Situacao</th>
+			<th></th>
+			<th></th>
+		</tr>
+		<tr ng-repeat="usuario in dados.usuarios">
+			<td>{{$index}}</td>
+			<td>{{usuario.nome}}</td>
+			<td>{{usuario.sobrenome}}</td>
+			<td>{{usuario.email}}</td>
+			<td align="center">
+				<input type="checkbox" disabled ng-checked="usuario.situacao" />
+			</td>
+			<td>
+				<a href="#/alterarUsuario/{{usuario.seqUsuario}}">alterar</a>
+			</td>
+			<td>
+				<a href="javascript:void(0)" ng-click="excluirUsuario(usuario.seqUsuario)">excluir</a>
+			</td>
+		</tr>
+	</table>
+</div>
