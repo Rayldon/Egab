@@ -1,8 +1,6 @@
 define([
 	"app", 
 	"../../../consultarUsuario/consultarUsuarioService",
-	"../../../js/filters",
-	"../../../js/directives",
 ], function(app){
 	app.controller('consultarUsuarioController', ['$scope','consultarUsuarioService',
 		function($scope, consultarUsuarioService){

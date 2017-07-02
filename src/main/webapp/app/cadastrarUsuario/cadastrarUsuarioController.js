@@ -1,12 +1,14 @@
 define([
 	"app", 
 	"../../../cadastrarUsuario/cadastrarUsuarioService",
-	"../../../js/filters",
-	"../../../js/directives",
+	"../../../util/utilService",
+	"../../../diretivas/telefone",
 	"../../../../angularjs/angular-md5",
 ], function(app){
 	app.controller('cadastrarUsuarioController', ['$scope', '$routeParams','md5','cadastrarUsuarioService',
 		function($scope, $routeParams, md5, cadastrarUsuarioService){
+			
+			$scope.teste = "123456";
 		
 			if($routeParams.id != null){
 				cadastrarUsuarioService.buscarUsuario($routeParams.id)
@@ -21,7 +23,7 @@ define([
 				if(validarCampos()){
 					$scope.dados.seqUsuario = ($scope.dados.seqUsuario != null) ? $scope.dados.seqUsuario: null;
 					$scope.dados.senha = md5.createHash($scope.senha);
-					
+					console.log($scope.dados);
 					cadastrarUsuarioService.salvar($scope.dados)
 					.then(function (response){
 		                $scope.success = "Salvo com sucesso";

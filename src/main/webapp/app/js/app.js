@@ -25,18 +25,6 @@ define(["angularAMD", "angular-route"], function(angularAMD) {
             //Aqui é definido dinamicamente o arquivo do controlador, que só será carregado caso essa rota seja acessada
             controllerUrl: "app/consultarUsuario/consultarUsuarioController.js"
         }))
-        .when("/cadastrarMedico", angularAMD.route({
-            templateUrl: "app/medico/cadastrarMedico.html",
-            controller: "medicoController",
-            //Aqui é definido dinamicamente o arquivo do controlador, que só será carregado caso essa rota seja acessada
-            controllerUrl: "app/medico/medicoCtrl.js"
-        }))
-        .when("/consultarMedico", angularAMD.route({
-            templateUrl: "app/medico/consultarMedico.html",
-            controller: "medicoController",
-            //Aqui é definido dinamicamente o arquivo do controlador, que só será carregado caso essa rota seja acessada
-            controllerUrl: "app/medico/medicoCtrl.js"
-        }))
         .otherwise({
             redirectTo: "/"
         })

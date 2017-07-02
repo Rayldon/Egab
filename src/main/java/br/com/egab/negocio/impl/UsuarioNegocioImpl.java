@@ -17,7 +17,7 @@ public class UsuarioNegocioImpl implements UsuarioNegocio{
 	
 	@Override
 	public List<Usuario> listarUsuarios(){		
-		return usuarioPersistencia.obterTodos(Usuario.class);
+		return usuarioPersistencia.listarUsuarios();
 	}
 	
 	@Override

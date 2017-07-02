@@ -1,12 +1,17 @@
 package br.com.egab.model;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -39,6 +44,10 @@ public class Usuario implements Serializable {
 	
 	@Column(name = "Senha", nullable = false)
 	private String senha;
+	
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+	@JoinColumn(name = "SEQ_USUARIO", referencedColumnName = "SEQ_USUARIO")
+	private List<Telefone> telefones;
 	
 	public Long getSeqUsuario() {
 		return this.seqUsuario;
@@ -86,5 +95,13 @@ public class Usuario implements Serializable {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public List<Telefone> getTelefones() {
+		return telefones;
+	}
+
+	public void setTelefones(List<Telefone> telefones) {
+		this.telefones = telefones;
 	}
 }
