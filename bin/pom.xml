@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+   <groupId>br.com</groupId> 
+  <artifactId>Egab</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging> 
+  
+  <properties> 
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  	 <failOnMissingWebXml>false</failOnMissingWebXml>
+  </properties>
+  <dependencies>
+  	<dependency>
+  		<groupId>javax</groupId>
+  		<artifactId>javaee-web-api</artifactId>
+  		<version>7.0</version>
+  		<scope>provided</scope> 
+  	</dependency>
+	<dependency>
+		<groupId>org.jboss.resteasy</groupId>
+		<artifactId>resteasy-multipart-provider</artifactId>
+		<version>2.2.0.GA</version>
+		<scope>provided</scope>
+	</dependency>
+  	<dependency>
+	    <groupId>org.jboss.weld.servlet</groupId>
+	    <artifactId>weld-servlet-core</artifactId>
+	    <version>2.1.2.Final</version>
+	</dependency>
+	<dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>2.5.2</version>
+    </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.5.2</version>
+    </dependency>
+	<dependency>
+		<groupId>org.mongodb</groupId>
+		<artifactId>mongo-java-driver</artifactId>
+		<version>2.12.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>20160810</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.5</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.hibernate.ogm</groupId>
+	    <artifactId>hibernate-ogm-mongodb</artifactId>
+	    <version>5.1.0.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.jboss.spec.javax.annotation</groupId>
+	    <artifactId>jboss-annotations-api_1.2_spec</artifactId>
+	    <version>1.0.0.Final</version>
+	</dependency>
+	<dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-core</artifactId>
+         <version>5.1.0.Final</version>
+         <scope>provided</scope>
+     </dependency>
+
+     <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-validator</artifactId>
+         <version>5.2.4.Final</version>
+         <scope>provided</scope>
+     </dependency>
+
+     <!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
+     <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-entitymanager</artifactId>
+         <version>5.1.0.Final</version>
+         <scope>provided</scope>
+     </dependency>
+
+     <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-ehcache</artifactId>
+         <version>5.1.0.Final</version>
+         <scope>provided</scope>
+     </dependency>
+     <dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>3.6</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.oracle</groupId>
+	    <artifactId>ojdbc6</artifactId>
+	    <version>11.2.0.3</version>
+	</dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>codelds</id>
+      <url>https://code.lds.org/nexus/content/groups/main-repo</url>
+    </repository>
+  </repositories>
+  
+  <build><finalName>${project.artifactId}</finalName></build>
+  
+</project>
