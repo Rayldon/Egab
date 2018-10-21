@@ -27,7 +27,7 @@ public class UsuarioNegocioImpl implements UsuarioNegocio{
 	
 	@Override
 	public void excluir(Long id){
-		System.out.println("teste");
+		System.out.println("master");
 		usuarioPersistencia.getEntityManager().remove(buscarPorId(id));
 	}
 	
