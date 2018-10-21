@@ -1,5 +1,7 @@
 package br.com.egab.servicos.rest;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -30,7 +32,7 @@ public class UsuarioService {
 	
 	@GET
 	@Path("/buscarUsuario/{id}")
-	public Usuario buscarUsuario(@PathParam("id") Long idUsuario) {
+	public Usuario buscarUsuarioIfsdfsdfsdfsdfsdfsdfsdfsdfD(@PathParam("id") Long idUsuario) {
 		return usuarioNegocio.buscarPorId(idUsuario);
 	}
 	
@@ -42,8 +44,8 @@ public class UsuarioService {
 	
 	@POST
 	@Path("/salvar")
-	public Usuario salvar(Usuario usuario) {
-		
-		return usuarioNegocio.salvar(usuario);
+	public Usuario salvar(Object usuario) {
+		List<Usuario> usuario2 = new ArrayList(((LinkedHashMap<String, String>)usuario).keySet());
+		return usuarioNegocio.salvar(usuario2.get(0));
 	}
 }
