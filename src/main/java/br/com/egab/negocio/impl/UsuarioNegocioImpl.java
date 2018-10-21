@@ -35,4 +35,8 @@ public class UsuarioNegocioImpl implements UsuarioNegocio{
 	public Usuario salvar(Usuario usuario){		
 		return usuarioPersistencia.getEntityManager().merge(usuario);
 	}
+	
+	public Usuario teste(Usuario usuario){		
+		return usuarioPersistencia.getEntityManager().merge(usuario);
+	}
 }
