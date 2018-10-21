@@ -32,7 +32,7 @@ public class UsuarioService {
 	
 	@GET
 	@Path("/buscarUsuario/{id}")
-	public Usuario buscarUsuarioteste2(@PathParam("id") Long idUsuario) {
+	public Usuario buscarUsuarioteste(@PathParam("id") Long idUsuario) {
 		return usuarioNegocio.buscarPorId(idUsuario);
 	}
 	
