@@ -38,7 +38,7 @@ public class UsuarioService {
 	
 	@GET
 	@Path("/excluirUsuario/{idUsuario}")
-	public void excluirUsuario(@PathParam("idUsuario") Long idUsuario) {
+	public void excluirUsuario2(@PathParam("idUsuario") Long idUsuario) {
 		usuarioNegocio.excluir(idUsuario);
 	}
 	
