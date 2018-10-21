@@ -32,7 +32,11 @@ public class UsuarioService {
 	
 	@GET
 	@Path("/buscarUsuario/{id}")
+<<<<<<< HEAD
 	public Usuario buscarUsuarioteste(@PathParam("id") Long idUsuario) {
+=======
+	public Usuario buscarUsuarioteste4(@PathParam("id") Long idUsuario) {
+>>>>>>> stash
 		return usuarioNegocio.buscarPorId(idUsuario);
 	}
 	
