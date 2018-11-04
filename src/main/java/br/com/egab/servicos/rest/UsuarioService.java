@@ -44,7 +44,7 @@ public class UsuarioService {
 	
 	@POST
 	@Path("/salvar2")
-	public Usuario salvar3(Object usuario) {
+	public Usuario salvar2(Object usuario) {
 		List<Usuario> usuario2 = new ArrayList(((LinkedHashMap<String, String>)usuario).keySet());
 		return usuarioNegocio.salvar(usuario2.get(0));
 	}
