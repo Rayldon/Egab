@@ -33,7 +33,7 @@ public class UsuarioNegocioImpl implements UsuarioNegocio{
 	
 	@Override
 	public Usuario salvar(Usuario usuario){	
-		//teste
+		//teste2
 		return usuarioPersistencia.getEntityManager().merge(usuario);
 	}
 }
